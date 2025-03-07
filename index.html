@@ -33,7 +33,7 @@
   </head>
   <body class="font-poppins transition bg-slate-200 w-11/12 mx-auto" id="body">
     <header class="px-7 py-3 bg-white rounded-2xl my-6">
-      <nav class="flex justify-between">
+      <nav class="flex justify-between py-3">
         <a href="index.html">
           <div class="flex justify-center content-center">
             <img src="./assets/logo.png" alt="" />
@@ -45,27 +45,29 @@
             <img src="./assets/checkbox.png" alt="" />
             <p>23</p>
           </div>
-          <div>
+          <div class="cursor-pointer" onclick="changeBackgroundColor()">
             <img src="./assets/theme-btn.png" alt="" />
           </div>
         </div>
       </nav>
     </header>
 
-    <main class="bg-white p-6 rounded-2xl">
-      <div class="parent">
-        <div>
-          <div class="task flex justify-between content-center gap-5">
-            <div class="flex m-auto bg-slate-200 w-1/4 p-8 gap-3 rounded-xl">
-                <div class="p-3 bg-white rounded-full flex my-auto">
-                    <img src="assets/checkbox.png" alt="">
-                </div>
+    <main class="">
+      <div class="parent flex ">
+        <div class="bg-white p-6 rounded-2xl w-3/4">
+          <div class="task flex justify-between content-center space-x-3">
+            <div class="flex bg-slate-200 w-1/4 p-8 gap-3 rounded-xl">
+              <div class="p-3 bg-white rounded-full flex my-auto">
+                <img src="assets/checkbox.png" alt="" />
+              </div>
               <div>
                 <h3 class="font-medium">Task Assigned</h3>
                 <p class="font-bold text-3xl" id="task-assigned">6</p>
               </div>
             </div>
-            <div class="bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] w-1/2 flex gap-3 py-6 pl-10 rounded-xl">
+            <div
+              class="bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] w-1/2 flex gap-3 py-6 pl-10 rounded-xl"
+            >
               <img src="./assets/board.png" alt="" />
               <div>
                 <p class="text-white text-2xl font-medium">
@@ -74,19 +76,21 @@
                 </p>
               </div>
             </div>
-            <div class="flex items-center p-5 bg-slate-200 space-x-3 rounded-xl"id="date">
-                <div class="bg-white rounded-full p-3">
-                    <img src="assets/calender.png" alt="">
-                </div>
-                <p>
-                    Wed, <br>
-                    <span>Jul 28 2025</span>
-                </p>
+            <div
+              class="flex items-center p-5 bg-slate-200 space-x-3 rounded-xl"
+              id="date"
+            >
+              <div class="bg-white rounded-full p-3">
+                <img src="assets/calender.png" alt="" />
+              </div>
+              <div id="date"></div>
             </div>
           </div>
           <div class="task-details"></div>
         </div>
-        <div></div>
+        <div class="w-1/4">
+          <h3>Events</h3>
+        </div>
       </div>
     </main>
     <footer></footer>

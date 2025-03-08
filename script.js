@@ -15,3 +15,13 @@ dateContainer.appendChild(p);
 document.getElementById('blog').addEventListener('click',function(){
     window.location.href='blog.html'
 })
+
+// button alert 
+const buttons = document.querySelectorAll('.complete-btn');
+for(button of buttons){
+    button.addEventListener('click',function(event){
+        alert('Board Updated');;
+        event.target.setAttribute('disabled',true);
+        
+    })
+}

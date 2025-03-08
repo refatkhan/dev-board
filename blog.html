@@ -1,59 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blogs</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!--------------Daisy UI--------------->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-       <!---------------- Tailwind --------------------->
-       <script src="https://cdn.tailwindcss.com"></script>
-       <!------------Font Awesome --------------->
-       <script
-         src="https://kit.fontawesome.com/bdeac3f621.js"
-         crossorigin="anonymous"
-       ></script>
-       <!--------------------Google Font------------------------->
-       <link rel="preconnect" href="https://fonts.googleapis.com" />
-       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-       <link
-         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-         rel="stylesheet"
-       />
-   
-       <script>
-         tailwind.config = {
-           theme: {
-             extend: {
-               fontFamily: {
-                 poppins: ["Poppins", "serif"],
-               },
-             },
-           },
-         };
-       </script>
-</head>
-<body class="font-poppins  bg-slate-500 w-11/12 mx-auto">
-    <header class="px-7 py-3 bg-white rounded-2xl my-6">
-        <nav class="flex justify-between py-3">
-          <a href="index.html">
-            <div class="flex justify-center content-center">
-              <img src="./assets/logo.png" alt="" />
-              <p class="flex items-center">Dev <span>Board</span></p>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-poppins bg-[#F4F7FF] h-screen w-screen">
+    <header class="py-3 w-11/12 mx-auto">
+      <div class="flex justify-between py-2 bg-white rounded-lg p-4">
+        <div class="flex justify-center content-center gap-2">
+          <img src="./assets/logo.png" alt="" />
+          <p class="flex items-center text-[#00303C] text-3xl">
+            Dev <span class="font-bold">Board</span>
+          </p>
+        </div>
+        <div class="flex items-center gap-x-10">
+          <a href="index.html" class="btn btn-primary">Back to Desk</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="">
+        <div class="w-11/12 mx-auto space-y-3">
+          <h2 class="font-bold text-3xl text-center mb-4">Blogs</h2>
+
+          <div
+            class="collapse collapse-arrow bg-base-100 border border-base-300"
+          >
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title font-semibold">
+              Question-1: What are the different ways to select an element in
+              the DOM?
             </div>
-          </a>
-          <div class="flex items-center">
-           <a href="./index.html">
-            <button class="bg-blue-500 text-white p-4 font-medium rounded-xl">
-                Click Me
-              </button>
-           </a>
+            <div class="collapse-content text-sm">
+             <ul class="font-medium text-sm space-y-1">
+              <h4> We can select elements in DOM in many ways. We can select with id,class,tag,querySelector, querySelectorAll. </h4>
+              <li>document.getElementById("id")</li>
+              <li>document.getElementsByClassName("class")</li>
+              <li>document.getElementsByTagName("tag")</li>
+              <li>document.querySelector(".class")</li>
+              <li>document.querySelectorAll("tag")</li>
+             </ul>
+            </div>
           </div>
-        </nav>
-      </header>
-
-      
-</body>
+          <div
+            class="collapse collapse-arrow bg-base-100 border border-base-300"
+          >
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title font-semibold">
+              Question-2: What is the difference between innerHTML, innerText,
+              and textContent ?
+            </div>
+            <div class="collapse-content text-sm">
+              By using innerHTML we will get all element inside html. Using innerText it will return only text and textContent it will return all text including hiddent content which can not done by innerText.
+            </div>
+          </div>
+          <div
+            class="collapse collapse-arrow bg-base-100 border border-base-300"
+          >
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title font-semibold">
+              Question-3: What is event delegation in the DOM?
+            </div>
+            <div class="collapse-content text-sm">
+              In Dom, event delegation is a process where we can add a eventListener in a parent element instead using in every child element. Such as you need same task in every child under a tag. Then you can use event delegation. 
+            </div>
+          </div>
+          <div
+            class="collapse collapse-arrow bg-base-100 border border-base-300"
+          >
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title font-semibold">
+              Question-4: What is event bubbling in the DOM?
+            </div>
+            <div class="collapse-content text-sm">
+              Event bubbling is a mechanism where an event triggered on a child element propagates upward through its ancestors in the DOM. It allows parent elements to respond to events triggered by their child elements
+              Such as we click on a button inside a div, the "click" event will first trigger on the button itself, then bubble up to the div, and potentially to even higher level elements in the DOM depending on how event listeners are set up. 
+            </div>
+          </div>
+          <div
+            class="collapse collapse-arrow bg-base-100 border border-base-300"
+          >
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title font-semibold">
+              Question-5: How do you create, add, and remove elements using
+              JavaScript?
+            </div>
+            <div class="collapse-content text-sm">
+              In JavaScript we can create an element , can add a element and we can also delete an element. <br>For create a element we can use <b>document.createElement("div");</b>. <br>For add a element we can use <b>document.body.appendChild(div);</b> . <br> For remove a element we can use <b>div.remove();</b> 
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
 </html>

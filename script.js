@@ -10,3 +10,8 @@ let dateString = new Date().toDateString();
 let formattedDate = dateString.replace(" ", "<br>");
 p.innerHTML = formattedDate; 
 dateContainer.appendChild(p);
+
+// redirect 
+document.getElementById('blog').addEventListener('click',function(){
+    window.location.href='blog.html'
+})

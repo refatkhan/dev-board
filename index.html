@@ -4,8 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dev-Board</title>
+    
     <!---------------- Tailwind --------------------->
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "serif"],
+            },
+          },
+        },
+      };
+    </script>
     <!------------Font Awesome --------------->
     <script
       src="https://kit.fontawesome.com/bdeac3f621.js"
@@ -19,25 +32,16 @@
       rel="stylesheet"
     />
 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              poppins: ["Poppins", "serif"],
-            },
-          },
-        },
-      };
-    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/themes.css" rel="stylesheet" type="text/css" />
+
   </head>
   <body class="font-poppins transition bg-slate-200 w-11/12 mx-auto" id="body">
     <header class="px-7 py-3 bg-white rounded-2xl my-6">
       <nav class="flex justify-between py-3">
         <a href="index.html">
-          <div class="flex justify-center content-center">
+          <div class="flex justify-center content-center gap-2">
             <img src="./assets/logo.png" alt="" />
-            <p class="flex items-center">Dev <span>Board</span></p>
+            <p class="flex items-center text-[#00303C] text-3xl">Dev <span class="font-bold">Board</span></p>
           </div>
         </a>
         <div class="flex gap-8 items-center">
@@ -57,7 +61,7 @@
         <div class="bg-white p-6 rounded-2xl w-3/4">
           <div class="task flex justify-between content-center space-x-3">
             <div class="flex bg-slate-200 w-1/4 p-8 gap-3 rounded-xl">
-              <div class="p-3 bg-white rounded-full flex my-auto">
+              <div class="p-3 bg-white rounded-full my-auto">
                 <img src="assets/checkbox.png" alt="" />
               </div>
               <div>
@@ -66,7 +70,7 @@
               </div>
             </div>
             <div
-              class="bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] w-1/2 flex gap-3 py-6 pl-10 rounded-xl"
+              class="bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] w-1/2 flex gap-3 py-6 pl-10 rounded-xl cursor-pointer" id="blog"
             >
               <img src="./assets/board.png" alt="" />
               <div>

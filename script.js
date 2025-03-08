@@ -17,7 +17,8 @@ document.getElementById("blog").addEventListener("click", function () {
 });
 
 // button related DOM
-
+const navCount = document.getElementById('updateCount');
+let totalNavCount = parseInt(navCount.innerText);
 const taskCount = document.getElementById("task-assigned");
 let totalCount = parseInt(taskCount.innerText);
 let disabledButton = 0;
@@ -28,7 +29,10 @@ for (button of buttons) {
     event.target.setAttribute("disabled", true);
     disabledButton++;
     totalCount--;
+    totalNavCount++;
+    
     taskCount.innerText = totalCount;
+    navCount.innerText = totalNavCount;
 
     if (disabledButton === buttons.length) {
       alert("all done");

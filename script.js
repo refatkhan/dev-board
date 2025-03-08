@@ -17,11 +17,15 @@ document.getElementById('blog').addEventListener('click',function(){
 })
 
 // button alert 
+let disabledButton = 0;
 const buttons = document.querySelectorAll('.complete-btn');
 for(button of buttons){
     button.addEventListener('click',function(event){
         alert('Board Updated');;
         event.target.setAttribute('disabled',true);
-        
+        disabledButton++;
+        if(disabledButton === buttons.length){
+            alert('all done');
+        }
     })
 }

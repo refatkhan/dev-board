@@ -55,7 +55,7 @@
           <div class="flex gap-8 items-center">
             <div class="flex gap-2 w-8 h-6">
               <img src="./assets/checkbox.png" alt="" />
-              <p id="updateCount">23</p>
+              <p id="updateCount" class="font-bold text-xl">23</p>
             </div>
             <div class="cursor-pointer" onclick="changeBackgroundColor()">
               <img src="./assets/theme-btn.png" alt="" />
@@ -66,7 +66,7 @@
       <main class="">
         <div class="parent flex gap-3">
           <div class="bg-white p-6 rounded-2xl w-3/4">
-            <div class="task flex-col gap-3 md:flex lg:flex-row">
+            <div class="task flex-col gap-3 md:flex lg:flex-row space-y-4">
               <div class="flex bg-slate-200 lg:w-1/4 p-8 gap-3 rounded-xl">
                 <div class="p-3 bg-white rounded-full my-auto">
                   <img src="assets/checkbox.png" alt="" />
@@ -93,9 +93,11 @@
                 id="date"
               >
                 <div class="bg-white rounded-full p-3">
-                  <img src="assets/calender.png" alt="" />
+                  <img src="assets/calender.png" alt=""  />
                 </div>
-                <div id="date"></div>
+                <div id="date">
+
+                </div>
               </div>
             </div>
             <div class="task-details">
@@ -264,13 +266,17 @@
           <div class="w-1/4 h-screen bg-white rounded-2xl">
            <div class=" text-center mt-4 space-y-4">
             <h3 class="flex justify-center gap-2"><img src="./assets/activity.png" alt=""> Activity Log</h3>
-            <button class="py-3 px-5 bg-[#3752FD] rounded-md">clear history</button>
+            <button id="historyClear" class="py-3 px-5 bg-[#3752FD] rounded-md">clear history</button>
+           </div>
+           <div id="eventHistory">
+
+
            </div>
           </div>
         </div>
       </main>
       <footer></footer>
     </div>
-    <script src="/script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

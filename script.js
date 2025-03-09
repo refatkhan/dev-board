@@ -38,18 +38,24 @@ for (button of buttons) {
     }
   });
 }
-
 // activity history 
-const clearHisotry = document.getElementById('historyClear');
+const clearHistory = document.getElementById('historyClear');
 const eventDetails = document.getElementById('eventHistory');
- for(button of buttons){
-    button.addEventListener('click',function(){
-        const taskTitle = document.querySelectorAll('.task-title').innerText;
-        const time = new Date().toLocaleTimeString();
-        const logMessage = 'You have completed the task ' + taskTitle + ' at ' + time;
-        eventDetails.innerHTML += '<div class="bg-[#F4F7FF] rounded-lg p-5">' + logMessage + '</div>';
-    })
- }
- clearHisotry.addEventListener('click', function() {
-    eventDetails.innerHTML = ''; 
+for (let button of buttons) {
+  button.addEventListener('click', function() {
+    let card = button.parentNode.parentNode.parentNode;
+    let cardTitle = card.getElementsByClassName('task-title')[0].innerText;
+    let TimeHistory = new Date().toLocaleTimeString();
+    const div = document.createElement('div');
+    div.innerHTML = `
+      <p class=" font-medium p-5 rounded-xl bg-slate-100">
+        You have completed the task ${cardTitle} at ${TimeHistory}
+      </p>
+    `;
+    
+    eventDetails.appendChild(div);
   });
+}
+clearHistory.addEventListener('click', function() {
+  eventDetails.innerHTML = '';
+});

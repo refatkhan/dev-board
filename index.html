@@ -37,12 +37,9 @@
       rel="stylesheet"
     />
   </head>
-  <body
-    class="font-poppins transition bg-slate-200 m-0 p-0"
-    id="body"
-  >
+  <body class="font-poppins transition bg-slate-200 m-0 p-0" id="body">
     <div class="w-11/12 mx-auto">
-      <header class="px-5 mb-4 bg-white rounded-2xl ">
+      <header class="px-5 mb-4 bg-white rounded-2xl">
         <nav class="flex justify-between py-4">
           <a href="index.html">
             <div class="flex justify-center content-center gap-2">
@@ -93,18 +90,18 @@
                 id="date"
               >
                 <div class="bg-white rounded-full p-3">
-                  <img src="assets/calender.png" alt=""  />
+                  <img src="assets/calender.png" alt="" />
                 </div>
-                <div id="date">
-
-                </div>
+                <div id="date"></div>
               </div>
             </div>
             <div class="task-details">
               <div
                 class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 p-2 gap-3 bg-white rounded-lg my-5"
               >
-                <div class="bg-[#F4F7FF] rounded-lg p-5 space-y-3">
+                <div
+                  class="bg-[#F4F7FF] rounded-lg p-5 space-y-3 target-history"
+                >
                   <span class="bg-white inline-block p-4 rounded-lg"
                     >ShopEase</span
                   >
@@ -130,7 +127,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="bg-[#F4F7FF] rounded-lg p-5 space-y-3">
+                <div
+                  class="bg-[#F4F7FF] rounded-lg p-5 space-y-3 target-history"
+                >
                   <span class="bg-white inline-block p-4 rounded-lg"
                     >CloudSync</span
                   >
@@ -155,7 +154,9 @@
                   </div>
                 </div>
 
-                <div class="bg-[#F4F7FF] rounded-lg p-5 space-y-3">
+                <div
+                  class="bg-[#F4F7FF] rounded-lg p-5 space-y-3 target-history"
+                >
                   <span class="bg-white inline-block p-4 rounded-lg"
                     >SwiftPay</span
                   >
@@ -182,7 +183,9 @@
                   </div>
                 </div>
 
-                <div class="bg-[#F4F7FF] rounded-lg p-5 space-y-3">
+                <div
+                  class="bg-[#F4F7FF] rounded-lg p-5 space-y-3 target-history"
+                >
                   <span class="bg-white inline-block p-4 rounded-lg">Meta</span>
                   <h3 class="font-medium text-2xl task-title">
                     Add new emoji 🤲
@@ -207,7 +210,9 @@
                   </div>
                 </div>
 
-                <div class="bg-[#F4F7FF] rounded-lg p-5 space-y-3">
+                <div
+                  class="bg-[#F4F7FF] rounded-lg p-5 space-y-3 target-history"
+                >
                   <span class="bg-white inline-block p-4 rounded-lg"
                     >Google LLC</span
                   >
@@ -234,7 +239,9 @@
                   </div>
                 </div>
 
-                <div class="bg-[#F4F7FF] rounded-lg p-5 space-y-3">
+                <div
+                  class="bg-[#F4F7FF] rounded-lg p-5 space-y-3 target-history"
+                >
                   <span class="bg-white inline-block p-4 rounded-lg"
                     >Glassdoar</span
                   >
@@ -264,14 +271,18 @@
             </div>
           </div>
           <div class="w-1/4 h-screen bg-white rounded-2xl">
-           <div class=" text-center mt-4 space-y-4">
-            <h3 class="flex justify-center gap-2"><img src="./assets/activity.png" alt=""> Activity Log</h3>
-            <button id="historyClear" class="py-3 px-5 bg-[#3752FD] rounded-md">clear history</button>
-           </div>
-           <div id="eventHistory">
-
-
-           </div>
+            <div class="text-center mt-4 space-y-4">
+              <h3 class="flex justify-center gap-2">
+                <img src="./assets/activity.png" alt="" /> Activity Log
+              </h3>
+              <button
+                id="historyClear"
+                class="py-3 px-5 bg-[#3752FD] rounded-md"
+              >
+                clear history
+              </button>
+            </div>
+            <div id="eventHistory"></div>
           </div>
         </div>
       </main>
